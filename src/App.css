@@ -1,40 +1,102 @@
+.main {
+    max-width: 700px;
+    padding: 3rem;
+    /* position: relative; 
+    left: 20%;
+    top: 50%;
+    transform: translate(50%, 50%); */
+    /* -webkit-transform: translate(-50%, -50%); */
+}
+
+/* SHAPES */
+
 .background-rectangle {
     height: 100%;
-    width: 100%;
-    background-color: #f5a20a;
-    padding-top: 4rem;
+    width: 90%;
+    background-color: #005E4C;
+    padding-top: 1rem;
     padding-bottom: 2rem;
+    animation: background-rectangle-animation 5s ease-in-out 0.9s infinite alternate-reverse;
 }
 
 .outer-rectangle {
-    height: 100%;
-    width: 70%;
-    background-color: #c85a05;
+    height: 400px;
+    width: 80%;
+    background-color: #DB2000;
     position: relative; 
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
+    animation: outer-rectangle-animation 5s ease-in-out 0.7s infinite alternate-reverse;
 }
 
 .middle-rectangle {
     height: 300px;
     width: 70%;
-    background-color: #bc4e0f;
+    background-color: #E66001;
     position: relative; 
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
+    animation: middle-rectangle-animation 5s ease-in-out 0.5s infinite alternate-reverse;
 }
 
 .inner-rectangle {
     height: 200px;
     width: 70%;
-    background-color: #b41d12;
+    background-color: #E39901;
     position: relative; 
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
+    animation: inner-rectangle-animation 5s ease-in-out 0s infinite alternate-reverse;
 }
+
+/* ANIMATIONS */
+
+@keyframes background-rectangle-animation {
+    0% {
+      background-color: #1F4778;
+      transform: translate(0%, 50%)
+    }
+
+    100% {
+      background-color: #005E4C;
+    }
+  }
+
+@keyframes outer-rectangle-animation {
+    0% {
+      background-color: #213D48;
+      transform: translate(-50%,4%)
+    }
+
+    100% {
+      background-color: #DB2000;
+    }
+  }
+
+@keyframes middle-rectangle-animation {
+    0% {
+      background-color: #54256D;
+      transform: translate(-50%, 20%)
+    }
+
+    100% {
+      background-color: #E66001;
+    }
+  }
+
+@keyframes inner-rectangle-animation {
+    0% {
+      background-color: #8C1A1A;
+      transform: translate(-50%, 28%)
+    }
+
+    100% {
+      background-color: #E39901;
+    }
+  }
